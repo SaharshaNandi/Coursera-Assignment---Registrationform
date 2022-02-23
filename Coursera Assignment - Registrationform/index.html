@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> 
+</head>
+
+<body>
+    <div class="container">
+    <form action="/myaction.php" name="regform" onsubmit="return validateForm()" method="post">
+        <h1>Sign up</h1>
+        <p>Please fill this form to register</p><hr/><br>
+
+    <!-- FULL NAME -->
+    <div class="form-group">
+        <label for="fn"><b>Full Name*</b></label>
+        <input type="text" placeholder="Enter your full name" name="user" class="form-control" id="user" required>
+        <b><span id="username" class="text-danger"></span></b>
+    </div>
+
+    <!-- AGE -->
+    <div class="form-group">
+        <label for="age"><b>Age*</b></label>
+        <input type="number" id="age" placeholder="How old are you?" name="age"  class="form-control" required>
+        <b><span id="age" class="text-danger"></span></b><br><br>
+    </div>
+        
+    <!-- GENDER -->
+    <div class="form-group">
+        <label for="gender"><b>Gender*</b></label><br>
+        <input type="radio" id="gender" name="gen" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="gender" name="gen" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="gender" name="gen" value="others">
+        <label for="others">Others</label><br><br>
+    </div>
+
+    <!-- DOB -->
+    <div class="form-group">
+        <label for="dob"><b>DOB*</b></label>
+        <input type="date" id="date" name="dob" required><br><br>
+    </div>
+
+    <!-- FAVOURITE COLOR -->
+    <div class="form-group">
+        <label for="color"><b>Enter your favourite color:</b></label>
+        <input type="color" id="favclr" name="favcolor" required>
+    </div><br><br>
+
+    <!-- LANGUAGES KNOWN -->
+    <div class="form-group">
+        <label for="languages"><b>Known languages:</b></label><br>
+        <input type="checkbox" name="lang" >
+        <label for="Spanish">Spanish</label>
+        <input type="checkbox" name="lang" >
+        <label for="English">English</label>
+        <input type="checkbox" name="lang" >
+        <label for="German">German</label>
+    </div><br><br>
+
+    <!-- EMAIL -->
+    <div class="form-group">
+        <label for="email"><b>Email*</b></label>
+        <input type="email" id="email" class="form-control" placeholder="Enter your valid email id" name="email" required>
+        <b><span id="emails" class="text-danger"></span></b>
+    </div><br>
+    
+    <!-- PASSWORD -->
+    <div class="form-group">
+        <label for="psw"><b>Password*</b></label>
+        <input type="password" placeholder="Enter your password" name="pass" id="pass" class="form-control" required>
+        <b><span id="passwords" class="text-danger"></span></b>
+    </div><br/>
+
+    <!-- CONFIRM PASSWORD -->
+    <div class="form-group">
+        <label for="cpsw"><b>Confirm Password*</b></label>
+        <input type="password" placeholder="Confirm your password" name="cpass" id="cpass" class="form-control" required>
+        <b><span id="conpasswords" class="text-danger"></span></b>
+    </div> 
+        <input class="registerbtn" type="submit" value="Submit">
+        
+
+    </form>
+    </div> 
+    
+</body>
+</html>
